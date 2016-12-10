@@ -1,6 +1,7 @@
 package day.one;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MethodPractice {
 	public static void main(String []args){
@@ -8,7 +9,9 @@ public class MethodPractice {
 		System.out.println( getEvenNumberList(20));
 		System.out.println("ans# 3 = " + getOddNumberList(30));
 		System.out.println(getLower("love Bangladesh"));
-		System.out.println( getUpper("This is Bangladesh"));
+		System.out.println(getUpper("This is Bangladesh"));
+		System.out.println(getIndexList("this is new york"));
+		System.out.println("ans# 11 = " + Arrays.toString(getNumberArray(20)));
 	
 
 	    }
@@ -73,11 +76,33 @@ public class MethodPractice {
     		return lowerCase;
     	}
         
+       
         //Write a method that take one String input and return same String in upper case
+        
         public static String getUpper(String text){
     		String upperCase = null;
     		upperCase = text.toUpperCase();
     		return upperCase;
     	}
+         //Write a method that take one String input and return a list of all index
+        
+        public static ArrayList<Integer> getIndexList(String text){
+    		ArrayList<Integer> index = new ArrayList<Integer>();
+    		for(int i=0;i<text.length();i++){
+    			index.add(i);
+    	}
+    		return index;
+    	}
+        
+        //Write a method that take one number input and return an Array that contains 0 to that given number##
+         
+        public static int[] getNumberArray(int number) {
+    		int[] numArray = new int[number + 1];
+    		for (int i = 0; i <= number; i++) {
+    			numArray[i] = i;
+
+    		}
+    		return numArray;
+        }	
 
         }
