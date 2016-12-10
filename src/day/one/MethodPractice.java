@@ -12,6 +12,7 @@ public class MethodPractice {
 		System.out.println(getUpper("This is Bangladesh"));
 		System.out.println(getIndexList("this is new york"));
 		System.out.println("ans# 11 = " + Arrays.toString(getNumberArray(20)));
+		System.out.println(getFirstFiveCharacter("beautyful country"));
 	
 
 	    }
@@ -104,5 +105,21 @@ public class MethodPractice {
     		}
     		return numArray;
         }	
+     // @@ Write a method that take one String input and return a list first five
+    	// Characters
+    	/**
+    	 * input / parameter : String text return type / out put : ArrayList
+    	 * <Character> serving bucket / container : List
+    	 */
+    	public static ArrayList<Character> getFirstFiveCharacter(String text) {
+    		ArrayList<Character> characterList = new ArrayList<Character>();
+
+    		for (int i = 0; i < 5; i++) {
+    			characterList.add(text.charAt(i));
+
+    		}
+
+    		return characterList;
+    	}
 
         }
