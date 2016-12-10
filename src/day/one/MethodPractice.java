@@ -7,6 +7,8 @@ public class MethodPractice {
 		System.out.println(getNewName("name"));
 		System.out.println( getEvenNumberList(20));
 		System.out.println("ans# 3 = " + getOddNumberList(30));
+		System.out.println("ans 6 "+ getLower("love Bangladesh"));
+	
 
 	}
 		// Write a method that take your name input and return your name
@@ -44,6 +46,26 @@ public class MethodPractice {
 
 			return oddList;
 		}		
-	
+		// write a method that take one String and one word input and return the count of that given word
+		
+		 
+        public static int getCountWord(String text, String word){
+		int countWord = 0;
+		String[]wordArray = text.split(" ");
+		for(int i=0; i<wordArray.length;i++){
+			if(wordArray[i].equalsIgnoreCase(word));
+			countWord++;
+		}
+		
+		return countWord;
+		
+	}
+       
+        // Write a method take one String input and return same String in lower case
+        public static String getLower(String text){
+    		String lowerCase = null;
+    		lowerCase = text.toLowerCase();
+    		return lowerCase;
+    	}
 
 }
