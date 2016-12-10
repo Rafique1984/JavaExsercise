@@ -7,10 +7,12 @@ public class MethodPractice {
 		System.out.println(getNewName("name"));
 		System.out.println( getEvenNumberList(20));
 		System.out.println("ans# 3 = " + getOddNumberList(30));
-		System.out.println("ans 6 "+ getLower("love Bangladesh"));
+		System.out.println(getLower("love Bangladesh"));
+		System.out.println( getUpper("This is Bangladesh"));
 	
 
-	}
+	    }
+	
 		// Write a method that take your name input and return your name
 		public static String getNewName(String name){
 			String myName = null;
@@ -19,6 +21,7 @@ public class MethodPractice {
 			
 			return myName;
 		}
+		
 		// Write a method that take a number input and return the list of all even number from 0 to that given number
 		
 		public static ArrayList<Integer> getEvenNumberList(int number){
@@ -27,22 +30,23 @@ public class MethodPractice {
 				
 				if(i% 2 == 0){
 					evenNumber.add(i);
-				}
+		}
 				
-			}
+		}
 			
 			
 			return evenNumber;
 		}
+		
 		//Write a method that that take a number input and return the list of all odd number from 0 to that given number
 		public static ArrayList<Integer> getOddNumberList(int number) {
 			ArrayList<Integer> oddList = new ArrayList<Integer>();
 			for (int i = 0; i <= number; i++) {
 				if (i % 2 == 1) {
 					oddList.add(i);
-				}
+		}
 
-			}
+		}
 
 			return oddList;
 		}		
@@ -59,13 +63,21 @@ public class MethodPractice {
 		
 		return countWord;
 		
-	}
+        }
        
         // Write a method take one String input and return same String in lower case
+        
         public static String getLower(String text){
     		String lowerCase = null;
     		lowerCase = text.toLowerCase();
     		return lowerCase;
     	}
+        
+        //Write a method that take one String input and return same String in upper case
+        public static String getUpper(String text){
+    		String upperCase = null;
+    		upperCase = text.toUpperCase();
+    		return upperCase;
+    	}
 
-}
+        }
