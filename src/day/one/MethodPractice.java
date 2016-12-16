@@ -15,6 +15,8 @@ public class MethodPractice {
 		System.out.println(getFirstFiveCharacter("beautyful country"));
 		System.out.println("ans# 12 = " + getNumberList(15));
 		System.out.println("ans# 13 = " + getName(25));
+		int[] numarray = {45,90,34,45};
+		System.out.println("ans# 14 = " + getHighestNumber(numarray));
 
 	}
 
@@ -143,6 +145,7 @@ public class MethodPractice {
 
 		return numberList;
 	}
+
 	// @@ method no * 13*
 	// ## Write a method that take one number input and return fizz if the given
 	// number divided by 5 and return buzz if the given
@@ -154,10 +157,10 @@ public class MethodPractice {
 
 	public static String getName(int number) {
 		String finalResult = null;
-		
+
 		if (number % 5 == 0 && number % 3 == 0) {
 			finalResult = "buzz";
-			
+
 		} else if (number % 5 == 0) {
 			finalResult = "fizz";
 
@@ -167,5 +170,18 @@ public class MethodPractice {
 
 		return finalResult;
 	}
+	// @@ method no *14*
+		// ## Write a method that take one Array input and return the max number.##
+		/**
+		 * input / parameter : int [] numarray out put / return type : int. serving
+		 * bucket / container : variable.
+		 */
+		public static int getHighestNumber(int[] numarray) {
+			int max = 0;
+			Arrays.sort(numarray);
+			max = numarray[numarray.length - 1];
+
+			return max;
+		}
 
 }
