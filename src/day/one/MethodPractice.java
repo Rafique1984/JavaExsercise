@@ -14,6 +14,7 @@ public class MethodPractice {
 		System.out.println("ans# 11 = " + Arrays.toString(getNumberArray(20)));
 		System.out.println(getFirstFiveCharacter("beautyful country"));
 		System.out.println("ans# 12 = " + getNumberList(15));
+		System.out.println("ans# 13 = " + getName(25));
 
 	}
 
@@ -141,6 +142,30 @@ public class MethodPractice {
 		}
 
 		return numberList;
+	}
+	// @@ method no * 13*
+	// ## Write a method that take one number input and return fizz if the given
+	// number divided by 5 and return buzz if the given
+	// number divided by 5 && 3 otherwise return fizz buzz.##
+	/**
+	 * input / parameter : int number. out put / return type :String. serving
+	 * bucket / container : variable.
+	 */
+
+	public static String getName(int number) {
+		String finalResult = null;
+		
+		if (number % 5 == 0 && number % 3 == 0) {
+			finalResult = "buzz";
+			
+		} else if (number % 5 == 0) {
+			finalResult = "fizz";
+
+		} else {
+			finalResult = "fizzBuzz";
+		}
+
+		return finalResult;
 	}
 
 }
