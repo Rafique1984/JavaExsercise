@@ -15,8 +15,10 @@ public class MethodPractice {
 		System.out.println(getFirstFiveCharacter("beautyful country"));
 		System.out.println("ans# 12 = " + getNumberList(15));
 		System.out.println("ans# 13 = " + getName(25));
-		int[] numarray = {45,90,34,45};
+		int[] numarray = { 45, 90, 34, 45 };
 		System.out.println("ans# 14 = " + getHighestNumber(numarray));
+		int[] nummarray = { 3, 4, 5, 8 };
+		System.out.println("ans # 15 = " + getMinNumber(nummarray));
 
 	}
 
@@ -170,18 +172,34 @@ public class MethodPractice {
 
 		return finalResult;
 	}
-	// @@ method no *14*
-		// ## Write a method that take one Array input and return the max number.##
-		/**
-		 * input / parameter : int [] numarray out put / return type : int. serving
-		 * bucket / container : variable.
-		 */
-		public static int getHighestNumber(int[] numarray) {
-			int max = 0;
-			Arrays.sort(numarray);
-			max = numarray[numarray.length - 1];
 
-			return max;
-		}
+	// @@ method no *14*
+	// ## Write a method that take one Array input and return the max number.##
+	/**
+	 * input / parameter : int [] numarray out put / return type : int. serving
+	 * bucket / container : variable.
+	 */
+	public static int getHighestNumber(int[] numarray) {
+		int max = 0;
+		Arrays.sort(numarray);
+		max = numarray[numarray.length - 1];
+
+		return max;
+	}
+
+	// @@ method no *15*
+	// ## Write a method that take one Array input and return the min number##
+	/**
+	 * input / parameter : int [] nummarray. out put/return type : int serving
+	 * bucket/ container : variable.
+	 */
+
+	public static int getMinNumber(int[] nummarray) {
+		int minimumNumber = 0;
+		Arrays.sort(nummarray);
+		minimumNumber = nummarray[0];
+
+		return minimumNumber;
+	}
 
 }
