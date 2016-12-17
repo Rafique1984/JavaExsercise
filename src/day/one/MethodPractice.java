@@ -19,6 +19,7 @@ public class MethodPractice {
 		System.out.println("ans# 14 = " + getHighestNumber(numarray));
 		int[] nummarray = { 3, 4, 5, 8 };
 		System.out.println("ans # 15 = " + getMinNumber(nummarray));
+		System.out.println("ans # 16 = "+ getResult(20));
 
 	}
 
@@ -201,5 +202,19 @@ public class MethodPractice {
 
 		return minimumNumber;
 	}
+	// @@ method no *16*
+	// ## Write a method that take a number input and return the same value as a
+	//String##
+	/*
+	 * input / parameter; int number out put/ return type :String, serving bucket : variable
+	 */
+	  
+	 public static String getResult(int number){
+		 String string = null;
+		 string = String.valueOf(number);
+		 
+		 
+		 return string;
+	 }
 
 }
