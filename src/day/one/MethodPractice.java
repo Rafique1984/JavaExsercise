@@ -21,6 +21,7 @@ public class MethodPractice {
 		System.out.println("ans # 15 = " + getMinNumber(nummarray));
 		System.out.println("ans # 16 = " + getResult(20));
 		System.out.println("ans # 17 = " + getIntegerFromString("30"));
+		System.out.println("ans # 18 = "+ getDecision("This is a String"));
 
 	}
 
@@ -231,5 +232,21 @@ public class MethodPractice {
 		integerNumber = Integer.valueOf(text);
 		return integerNumber;
 	}
+	// @@ method no *18*
+		// ## Write a method that take String input and return true if it contains
+		// char 'a' otherwise return false ##
+		/**
+		 * input / parameter : String text. output / return type : boolean serving
+		 * bucket / container : variable.
+		 */
+		public static boolean getDecision(String text) {
+			boolean decision = false;
+			for (int i = 0; i < text.length(); i++) {
+				if (text.charAt(i) == 'a' || text.charAt(i) == 'A') {
+					decision = true;
+				}
+			}
+			return decision;
+		}
 
 }
