@@ -19,7 +19,8 @@ public class MethodPractice {
 		System.out.println("ans# 14 = " + getHighestNumber(numarray));
 		int[] nummarray = { 3, 4, 5, 8 };
 		System.out.println("ans # 15 = " + getMinNumber(nummarray));
-		System.out.println("ans # 16 = "+ getResult(20));
+		System.out.println("ans # 16 = " + getResult(20));
+		System.out.println("ans # 17 = " + getIntegerFromString("30"));
 
 	}
 
@@ -204,17 +205,31 @@ public class MethodPractice {
 	}
 	// @@ method no *16*
 	// ## Write a method that take a number input and return the same value as a
-	//String##
+	// String##
 	/*
-	 * input / parameter; int number out put/ return type :String, serving bucket : variable
+	 * input / parameter; int number out put/ return type :String, serving
+	 * bucket : variable
 	 */
-	  
-	 public static String getResult(int number){
-		 String string = null;
-		 string = String.valueOf(number);
-		 
-		 
-		 return string;
-	 }
+
+	public static String getResult(int number) {
+		String string = null;
+		string = String.valueOf(number);
+
+		return string;
+	}
+
+	// @@ method no *17*
+	// ## Write a method that take a String representation of number input and
+	// return the same value as Integer.##
+	/**
+	 * input / parameter : String text. output / return type : int. serving
+	 * bucket / container : variable.
+	 */
+
+	public static int getIntegerFromString(String text) {
+		int integerNumber = 0;
+		integerNumber = Integer.valueOf(text);
+		return integerNumber;
+	}
 
 }
