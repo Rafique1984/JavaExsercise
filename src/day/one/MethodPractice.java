@@ -27,6 +27,7 @@ public class MethodPractice {
 		System.out.println("ans # 18 = " + getDecision("This is a String"));
 		System.out.println("ans # 19 = " + getSumOFAllIndex("beautiful"));
 		System.out.println("ans # 20 = " + getLastFiveCharacter("bangladesh"));
+		System.out.println("ans# 21 = " + getFirstFiveCharacter("beautyful country"));
 
 	}
 
@@ -348,6 +349,20 @@ public class MethodPractice {
 			characterList.add(text.charAt(i));
 		}
 		return characterList;
+
+	}
+
+	/*
+	 * method no 21 Write a method that take one String input and return a list
+	 * first five Character input : String text return : ArrayList<Character>
+	 * serving bucket: List
+	 */
+	public static ArrayList<Character> getFirstFiveCharacter(String text) {
+		ArrayList<Character> firstFive = new ArrayList<Character>();
+		for (int i = 0; i <= 4; i++) {
+			firstFive.add(text.charAt(i));
+		}
+		return firstFive;
 
 	}
 
