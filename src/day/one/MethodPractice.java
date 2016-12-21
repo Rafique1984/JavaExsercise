@@ -28,6 +28,7 @@ public class MethodPractice {
 		System.out.println("ans # 19 = " + getSumOFAllIndex("beautiful"));
 		System.out.println("ans # 20 = " + getLastFiveCharacter("bangladesh"));
 		System.out.println("ans# 21 = " + getFirstFiveCharacter("beautyful country"));
+		System.out.println("ans# 22 = " + getFifthToTenthCharacter("we love our country"));
 
 	}
 
@@ -353,7 +354,7 @@ public class MethodPractice {
 	}
 
 	/*
-	 * method no 21 Write a method that take one String input and return a list
+	 * @@ method no *21* Write a method that take one String input and return a list
 	 * first five Character input : String text return : ArrayList<Character>
 	 * serving bucket: List
 	 */
@@ -364,6 +365,19 @@ public class MethodPractice {
 		}
 		return firstFive;
 
+	}
+	/*@@ method no *22*
+	 *Write a method that take one String input and fifth to ten character as a String 		
+	 * input : String text
+	 * return : String 
+	 * serving bucket : variable
+	 */
+	public static String getFifthToTenthCharacter(String text){		
+	    String result = "";	
+		for(int i= 4; i<=9; i++){	
+		result = result + String.valueOf(text.charAt(i));
+			} 
+		return result;
 	}
 
 }
