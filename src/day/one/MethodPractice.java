@@ -30,6 +30,7 @@ public class MethodPractice {
 		System.out.println("ans# 21 = " + getFirstFiveCharacter("beautyful country"));
 		System.out.println("ans# 22 = " + getFifthToTenthCharacter("we love our country"));
 		System.out.println("ans# 23 = " + getWordList("this is a String"));
+		System.out.println("ans# 24 = "+ getFirstWord("we love our country"));
 
 	}
 
@@ -394,6 +395,20 @@ public class MethodPractice {
 
 		}
 		return wordList;
+	}
+
+	/*
+	 * @@ method no 24 Write a method that one String input and return first
+	 * word input/ parameter : String text, out put/return type: String,
+	 * Container: variable,
+	 */
+	public static String getFirstWord(String text) {
+		String word = " ";
+		String[] wordArray = text.split(" ");
+		// System.out.println(Arrays.toString(wordArray));
+		word = wordArray[0];
+
+		return word;
 	}
 
 }
