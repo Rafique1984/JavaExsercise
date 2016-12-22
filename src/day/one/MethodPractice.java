@@ -29,6 +29,7 @@ public class MethodPractice {
 		System.out.println("ans # 20 = " + getLastFiveCharacter("bangladesh"));
 		System.out.println("ans# 21 = " + getFirstFiveCharacter("beautyful country"));
 		System.out.println("ans# 22 = " + getFifthToTenthCharacter("we love our country"));
+		System.out.println("ans# 23 = " + getWordList("this is a String"));
 
 	}
 
@@ -354,9 +355,9 @@ public class MethodPractice {
 	}
 
 	/*
-	 * @@ method no *21* Write a method that take one String input and return a list
-	 * first five Character input : String text return : ArrayList<Character>
-	 * serving bucket: List
+	 * @@ method no *21* Write a method that take one String input and return a
+	 * list first five Character input : String text return :
+	 * ArrayList<Character> serving bucket: List
 	 */
 	public static ArrayList<Character> getFirstFiveCharacter(String text) {
 		ArrayList<Character> firstFive = new ArrayList<Character>();
@@ -366,18 +367,33 @@ public class MethodPractice {
 		return firstFive;
 
 	}
-	/*@@ method no *22*
-	 *Write a method that take one String input and fifth to ten character as a String 		
-	 * input : String text
-	 * return : String 
-	 * serving bucket : variable
+
+	/*
+	 * @@ method no *22* Write a method that take one String input and fifth to
+	 * ten character as a String input : String text return : String serving
+	 * bucket : variable
 	 */
-	public static String getFifthToTenthCharacter(String text){		
-	    String result = "";	
-		for(int i= 4; i<=9; i++){	
-		result = result + String.valueOf(text.charAt(i));
-			} 
+	public static String getFifthToTenthCharacter(String text) {
+		String result = "";
+		for (int i = 4; i <= 9; i++) {
+			result = result + String.valueOf(text.charAt(i));
+		}
 		return result;
+	}
+
+	/*
+	 * @@ method no 23 Write a method that take one String input and return a
+	 * list of all words input : String text return : ArrayList<String> serving
+	 * bucket : List
+	 */
+	public static ArrayList<String> getWordList(String text) {
+		ArrayList<String> wordList = new ArrayList<String>();
+		String[] numArray = text.split(" ");
+		for (int i = 0; i < numArray.length; i++) {
+			wordList.add(numArray[i]);
+
+		}
+		return wordList;
 	}
 
 }
