@@ -31,7 +31,8 @@ public class MethodPractice {
 		System.out.println("ans# 22 = " + getFifthToTenthCharacter("we love our country"));
 		System.out.println("ans# 23 = " + getWordList("this is a String"));
 		System.out.println("ans# 24 = " + getFirstWord("we love our country"));
-		System.out.println("ans# 25 = " +getSearchResult("This is a String", "is"));
+		System.out.println("ans# 25 = " + getSearchResult("This is a String", "is"));
+		System.out.println("ans# 26 " + getWordCount("This is a String", "is"));
 
 	}
 
@@ -430,6 +431,24 @@ public class MethodPractice {
 
 		}
 		return result;
+	}
+	/*
+	 * @@ method no 26 ## write a method that take one String and one word input
+	 * and return the count of that given word input : String text, String word
+	 * out put : int container: variable
+	 */
+
+	public static int getWordCount(String text, String word) {
+		int count = 0;
+		String[] wordArray = text.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+		// System.out.println(wordArray[i].equalsIgnoreCase(word));
+		if (wordArray[i].equalsIgnoreCase(word)) {
+				count++;
+			}
+		}
+
+		return count;
 	}
 
 }
