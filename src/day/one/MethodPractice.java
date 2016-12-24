@@ -32,7 +32,8 @@ public class MethodPractice {
 		System.out.println("ans# 23 = " + getWordList("this is a String"));
 		System.out.println("ans# 24 = " + getFirstWord("we love our country"));
 		System.out.println("ans# 25 = " + getSearchResult("This is a String", "is"));
-		System.out.println("ans# 26 " + getWordCount("This is a String", "is"));
+		System.out.println("ans# 26 = " + getWordCount("This is a String", "is"));
+		System.out.println("ans# 27 = " + getConsonantLeterCount("Bangladesh is a beautiful country"));
 
 	}
 
@@ -442,8 +443,27 @@ public class MethodPractice {
 		int count = 0;
 		String[] wordArray = text.split(" ");
 		for (int i = 0; i < wordArray.length; i++) {
-		// System.out.println(wordArray[i].equalsIgnoreCase(word));
-		if (wordArray[i].equalsIgnoreCase(word)) {
+			// System.out.println(wordArray[i].equalsIgnoreCase(word));
+			if (wordArray[i].equalsIgnoreCase(word)) {
+				count++;
+			}
+		}
+
+		return count;
+	}
+
+	/*
+	 * @@ method no 27 ## write a method that take one String input and return
+	 * the count of all consonant input / parameter : String text out put /
+	 * return type ; int serving bucket / container : variable
+	 */
+	public static int getConsonantLeterCount(String text) {
+		int count = 0;
+		String newText = text.toLowerCase();
+		String consonant = "bcdfghjklmnpqrstvwxyz";
+		for (int i = 0; i < newText.length(); i++) {
+			String ch = String.valueOf(newText.charAt(i));
+			if (consonant.contains(ch)) {
 				count++;
 			}
 		}
