@@ -35,6 +35,7 @@ public class MethodPractice {
 		System.out.println("ans# 26 = " + getWordCount("This is a String", "is"));
 		System.out.println("ans# 27 = " + getConsonantLeterCount("Bangladesh is a beautiful country"));
 		System.out.println("ans # 28 = " + getVowelCount("This is a String"));
+		System.out.println("ans# 29 = " + getUpperCaseCharacterCount("This is a String"));
 
 	}
 
@@ -70,8 +71,8 @@ public class MethodPractice {
 	}
 
 	/*
-	 * @@ method no 3 ## Write a method that that take a number input and return
-	 * the list of all odd number from 0 to that given number input/ parameter :
+	 * @@ method no 3 ## Write a method that take a number input and return the
+	 * list of all odd number from 0 to that given number: input/ parameter :
 	 * int number. output/ return type :ArrayList<Integer>. serving bucket /
 	 * container :List.
 	 */
@@ -493,6 +494,26 @@ public class MethodPractice {
 		}
 
 		return countOne;
+	}
+	/*
+	 * @@ method no *29* Write a method that take one String input and return
+	 * the count of all upper case characters ## input / parameter : String
+	 * text. return type / out put : int serving bucket / container : variable
+	 */
+
+	public static int getUpperCaseCharacterCount(String text) {
+		int count = 0;
+		String upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+		for (int i = 0; i < text.length(); i++) {
+			String character = String.valueOf(text.charAt(i));
+
+			if (upperCaseChar.contains(character)) {
+				count++;
+			}
+		}
+
+		return count;
 	}
 
 }
