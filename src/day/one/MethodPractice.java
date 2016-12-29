@@ -37,6 +37,7 @@ public class MethodPractice {
 		System.out.println("ans # 28 = " + getVowelCount("This is a String"));
 		System.out.println("ans# 29 = " + getUpperCaseCharacterCount("This is a String"));
 		System.out.println("ans# 30 = " + getCharacterCount("Proud of Bangladesh"));
+		System.out.println("ans # 31 = " + getRepeatedChar("This is a String"));
 
 	}
 
@@ -531,6 +532,31 @@ public class MethodPractice {
 		}
 
 		return count;
+	}
+	/*
+	 * @@ method no *31* write a method that take one String input and return
+	 * all repeated characters without whitespace ## input/ parameter : String
+	 * text, return type : String. serving bucket / container : variable.
+	 */
+
+	public static String getRepeatedChar(String text) {
+		String repeatedChar = "";
+		String newText = text.toLowerCase().replace(" ", "");
+
+		for (int i = 0; i < newText.length(); i++) {
+			for (int j = i + 1; j < newText.length(); j++) {
+				if (newText.charAt(i) == newText.charAt(j)) {
+					if (!repeatedChar.contains(String.valueOf(newText.charAt(i)))) {
+						repeatedChar = repeatedChar + newText.charAt(i);
+
+					}
+				}
+
+			}
+
+		}
+
+		return repeatedChar;
 	}
 
 }
