@@ -36,6 +36,7 @@ public class MethodPractice {
 		System.out.println("ans# 27 = " + getConsonantLeterCount("Bangladesh is a beautiful country"));
 		System.out.println("ans # 28 = " + getVowelCount("This is a String"));
 		System.out.println("ans# 29 = " + getUpperCaseCharacterCount("This is a String"));
+		System.out.println("ans# 30 = " + getCharacterCount("Proud of Bangladesh"));
 
 	}
 
@@ -507,8 +508,24 @@ public class MethodPractice {
 
 		for (int i = 0; i < text.length(); i++) {
 			String character = String.valueOf(text.charAt(i));
-
 			if (upperCaseChar.contains(character)) {
+				count++;
+			}
+		}
+
+		return count;
+	}
+	/*
+	 * @@ method no *30* write a method that take one String input and return
+	 * the count of characters without white Space## input ; String text return
+	 * : int serving bucket : variable
+	 */
+
+	public static int getCharacterCount(String text) {
+		int count = 0;
+		for (int i = 0; i < text.length(); i++) {
+			if (text.charAt(i) != ' ') {
+
 				count++;
 			}
 		}
