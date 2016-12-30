@@ -38,6 +38,7 @@ public class MethodPractice {
 		System.out.println("ans# 29 = " + getUpperCaseCharacterCount("This is a String"));
 		System.out.println("ans# 30 = " + getCharacterCount("Proud of Bangladesh"));
 		System.out.println("ans # 31 = " + getRepeatedChar("This is a String"));
+		System.out.println("ans# 32 = " + getUniqueCharacter("This is our country"));
 
 	}
 
@@ -557,6 +558,27 @@ public class MethodPractice {
 		}
 
 		return repeatedChar;
+	}
+
+	/*
+	 * @@ method no *32* Write a method that take one String input and return
+	 * all unique characters without whitespace input / parameter : String text
+	 * out put / return type : String container : variable
+	 */
+	public static String getUniqueCharacter(String text) {
+		String uniqueChar = "";
+		String newText = text.toLowerCase().replaceAll(" ", "");
+		uniqueChar = newText;
+		for (int i = 0; i < newText.length(); i++) {
+			for (int j = i + 1; j < newText.length(); j++) {
+
+				if (newText.charAt(i) == newText.charAt(j)) {
+					uniqueChar = uniqueChar.replaceAll(String.valueOf(newText.charAt(i)), "");
+				}
+			}
+		}
+
+		return uniqueChar;
 	}
 
 }
