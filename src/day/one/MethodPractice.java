@@ -39,6 +39,7 @@ public class MethodPractice {
 		System.out.println("ans# 30 = " + getCharacterCount("Proud of Bangladesh"));
 		System.out.println("ans # 31 = " + getRepeatedChar("This is a String"));
 		System.out.println("ans# 32 = " + getUniqueCharacter("This is our country"));
+		System.out.println("ans# 33 = " + getCharacterCount("This is a String"));
 
 	}
 
@@ -579,6 +580,22 @@ public class MethodPractice {
 		}
 
 		return uniqueChar;
+	}
+	/*
+	 * @@ Method no *33* Write a method that take one String and character input
+	 * return the count of that given character## input : String text, char a
+	 * return type : int serving bucket : variable
+	 */
+
+	public static int getCharacterCount(String text, char a) {
+		int count = 0;
+		for (int i = 0; i < text.length(); i++) {
+			if (text.toLowerCase().charAt(i) == 'a') {
+				count++;
+			}
+		}
+
+		return count;
 	}
 
 }
