@@ -40,6 +40,8 @@ public class MethodPractice {
 		System.out.println("ans # 31 = " + getRepeatedChar("This is a String"));
 		System.out.println("ans# 32 = " + getUniqueCharacter("This is our country"));
 		System.out.println("ans# 33 = " + getCharacterCount("This is a String"));
+		int[] numArray = { 10, 20, 30, 40 };
+		System.out.println("ans# 34 = " + getSum(numArray));
 
 	}
 
@@ -596,6 +598,20 @@ public class MethodPractice {
 		}
 
 		return count;
+	}
+
+	/*
+	 * @@ Method no *34* Write a method that take one integer type array input
+	 * and return sum of all values ## input : int [] numArray return type : int
+	 * serving bucket : variable
+	 */
+	public static int getSum(int[] numArray) {
+		int sum = 0;
+		for (int i = 0; i < numArray.length; i++) {
+			sum = sum + numArray[i];
+		}
+
+		return sum;
 	}
 
 }
