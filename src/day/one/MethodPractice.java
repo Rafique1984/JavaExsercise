@@ -42,6 +42,13 @@ public class MethodPractice {
 		System.out.println("ans# 33 = " + getCharacterCount("This is a String"));
 		int[] numArray = { 10, 20, 30, 40 };
 		System.out.println("ans# 34 = " + getSum(numArray));
+		ArrayList<Integer> numberList = new ArrayList<Integer>();
+		numberList.add(1);
+		numberList.add(2);
+		numberList.add(3);
+		numberList.add(4);
+		numberList.add(5);
+		System.out.println("ans# 35 = " + getSum(numberList));
 
 	}
 
@@ -609,6 +616,21 @@ public class MethodPractice {
 		int sum = 0;
 		for (int i = 0; i < numArray.length; i++) {
 			sum = sum + numArray[i];
+		}
+
+		return sum;
+	}
+	/*
+	 * @@ Method no *35* Write a method that take one Integer type List input
+	 * and return sum of all values## input / parameter : ArrayList<Integer>
+	 * numList return type / out put : int serving bucket / container : variable
+	 */
+
+	public static int getSum(ArrayList<Integer> numList) {
+		int sum = 0;
+		for (int i = 0; i < numList.size(); i++) {
+
+			sum = sum + numList.get(i);
 		}
 
 		return sum;
