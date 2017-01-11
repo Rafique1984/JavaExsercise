@@ -49,6 +49,7 @@ public class MethodPractice {
 		numberList.add(4);
 		numberList.add(5);
 		System.out.println("ans# 35 = " + getSum(numberList));
+		System.out.println("ans# 36 = " + ("This is a String"));
 
 	}
 
@@ -634,6 +635,22 @@ public class MethodPractice {
 		}
 
 		return sum;
+	}
+	/*
+	 * @@ Method no *36* Write a method that take one String input and return
+	 * same String in reverse order ## input :String text return type : String
+	 * serving bucket : variable
+	 */
+
+	public static String getReversString(String text) {
+		String reverseString = "";
+		for (int i = text.length() - 1; i >= 0; i--) {
+			reverseString = reverseString + text.charAt(i);
+
+		}
+
+		return reverseString;
+
 	}
 
 }
