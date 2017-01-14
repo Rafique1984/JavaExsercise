@@ -49,7 +49,15 @@ public class MethodPractice {
 		numberList.add(4);
 		numberList.add(5);
 		System.out.println("ans# 35 = " + getSum(numberList));
-		System.out.println("ans# 36 = " + getReversString ("This is a String"));
+		System.out.println("ans# 36 = " + getReversString("This is a String"));
+
+		ArrayList<Integer> numList = new ArrayList<Integer>();
+		numList.add(1);
+		numList.add(2);
+		numList.add(9);
+		numList.add(4);
+		numList.add(5);
+		System.out.println("ans# 37 = " + Arrays.toString(getArrayFromList(numList)));
 
 	}
 
@@ -645,12 +653,27 @@ public class MethodPractice {
 	public static String getReversString(String text) {
 		String reverseString = "";
 		for (int i = text.length() - 1; i >= 0; i--) {
-			reverseString +=text.charAt(i);
+			reverseString += text.charAt(i);
 
 		}
 
 		return reverseString;
 
+	}
+
+	/*
+	 * @@ method no *37* Write a method that take one number list input then
+	 * convert to an Array and return that Array ## input / parameter :
+	 * ArrayList<Integer> numList return type / out put : int [] serving bucket
+	 * ; array
+	 */
+	public static int[] getArrayFromList(ArrayList<Integer> numList) {
+		int[] numArray = new int[numList.size()];
+		for (int i = 0; i < numList.size(); i++) {
+			numArray[i] = numList.get(i);
+		}
+
+		return numArray;
 	}
 
 }
