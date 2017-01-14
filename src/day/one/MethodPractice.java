@@ -49,7 +49,7 @@ public class MethodPractice {
 		numberList.add(4);
 		numberList.add(5);
 		System.out.println("ans# 35 = " + getSum(numberList));
-		System.out.println("ans# 36 = " + ("This is a String"));
+		System.out.println("ans# 36 = " + getReversString ("This is a String"));
 
 	}
 
@@ -645,7 +645,7 @@ public class MethodPractice {
 	public static String getReversString(String text) {
 		String reverseString = "";
 		for (int i = text.length() - 1; i >= 0; i--) {
-			reverseString = reverseString + text.charAt(i);
+			reverseString +=text.charAt(i);
 
 		}
 
