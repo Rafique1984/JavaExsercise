@@ -58,6 +58,8 @@ public class MethodPractice {
 		numList.add(4);
 		numList.add(5);
 		System.out.println("ans# 37 = " + Arrays.toString(getArrayFromList(numList)));
+		int[] numArrayTwo = { 13, 3, 45, 80 };
+		System.out.println("ans# 38 = " + getNumberList(numArrayTwo));
 
 	}
 
@@ -674,6 +676,21 @@ public class MethodPractice {
 		}
 
 		return numArray;
+	}
+
+	/*
+	 * @@ method no *38* Write a method that take one number Array input then
+	 * convert to a list and return list ## input / parameter : int []
+	 * numArrayTwo return type : ArrayList <Integer> serving bucket/ container :
+	 * List
+	 */
+	public static ArrayList<Integer> getNumberList(int[] numArrayTwo) {
+		ArrayList<Integer> numberList = new ArrayList<Integer>();
+		for (int i = 0; i < numArrayTwo.length; i++) {
+			numberList.add(numArrayTwo[i]);
+		}
+
+		return numberList;
 	}
 
 }
