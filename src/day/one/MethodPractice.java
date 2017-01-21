@@ -60,6 +60,8 @@ public class MethodPractice {
 		System.out.println("ans# 37 = " + Arrays.toString(getArrayFromList(numList)));
 		int[] numArrayTwo = { 13, 3, 45, 80 };
 		System.out.println("ans# 38 = " + getNumberList(numArrayTwo));
+		int[] numArrayThree = { 12, 34, 11, 9, 34 };
+		System.out.println("ans# 39 = " + Arrays.toString(numArrayThree));
 
 	}
 
@@ -691,6 +693,19 @@ public class MethodPractice {
 		}
 
 		return numberList;
+	}
+
+	/*
+	 * @@ Method no *39* Write a method that take one number Array input and
+	 * return the sorted Array ## input / parameter : int [] numArrayThree.
+	 * return type / int[] serving bucket : Array
+	 */
+	public static int[] getSortedArrayList(int[] numArrayThree) {
+		int[] sortedArray = new int[numArrayThree.length];
+		Arrays.sort(numArrayThree);
+		sortedArray = numArrayThree;
+
+		return sortedArray;
 	}
 
 }
