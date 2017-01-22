@@ -2,6 +2,7 @@ package day.one;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class MethodPractice {
 	public static void main(String[] args) {
@@ -62,6 +63,12 @@ public class MethodPractice {
 		System.out.println("ans# 38 = " + getNumberList(numArrayTwo));
 		int[] numArrayThree = { 12, 34, 11, 9, 34 };
 		System.out.println("ans# 39 = " + Arrays.toString(numArrayThree));
+		ArrayList<Integer> numListOne = new ArrayList<Integer>();
+		numListOne.add(12);
+		numListOne.add(22);
+		numListOne.add(32);
+		numListOne.add(52);
+		System.out.println("ans# 40 = " + getSortedList(numListOne));
 
 	}
 
@@ -706,6 +713,20 @@ public class MethodPractice {
 		sortedArray = numArrayThree;
 
 		return sortedArray;
+	}
+
+	/*
+	 * @@ Method no *40* Write a method that take one numberList input and
+	 * return the sortedList input : ArrayList<Integer> numList return ::
+	 * ArrayList<Integer> serving bucket : List
+	 */
+	public static ArrayList<Integer> getSortedList(ArrayList<Integer> numListOne) {
+		ArrayList<Integer> sortedList = new ArrayList<Integer>();
+		Collections.sort(numListOne);
+		// Collections.reverse(numList);
+		sortedList = numListOne;
+
+		return sortedList;
 	}
 
 }
