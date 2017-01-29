@@ -71,6 +71,8 @@ public class MethodPractice {
 		System.out.println("ans# 40 = " + getSortedList(numListOne));
 		int[] numArrayFive = { 34, 35, 36, 37 };
 		System.out.println("ans# 41 = " + Arrays.toString(getBubbleSortedArray(numArrayFive)));
+		String text = "I am 20 years old";
+		System.out.println("ans# 42 = " + getNumberFromString(text));
 
 	}
 
@@ -751,6 +753,23 @@ public class MethodPractice {
 
 		sortedArray = numArrayFive;
 		return sortedArray;
+	}
+
+	/*
+	 * Method no *42* Write a method that take this 'i am 20 years old' String
+	 * input and return '20' as integer ## input/ parameter: String text return
+	 * type: int serving bucket variable
+	 * 
+	 */
+	public static int getNumberFromString(String text) {
+		int number = 0;
+		String[] wordArray = text.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].matches("[0-9]+")) {
+				number = Integer.valueOf(wordArray[i]);
+			}
+		}
+		return number;
 	}
 
 }
